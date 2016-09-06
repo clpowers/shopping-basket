@@ -20,3 +20,16 @@ class NumberBadge : UILabel {
     }
     
 }
+
+class BasketBadge : NumberBadge, ShoppingBasketDelegate {
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        ShoppingBasket.sharedInstance.delegate = self
+    }
+    
+    func shoppingBasketDidUpdateItemCount(count: Int) {
+        setBadgeNumber(count)
+    }
+    
+}

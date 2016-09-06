@@ -23,11 +23,6 @@ class QuantityControl : UIStackView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        decrementButton?.customize{
-            $0.layer.cornerRadius = 2
-            $0.layer.borderColor = Style.Color.primary.CGColor
-            $0.layer.borderWidth = 2
-        }
         quantityLabel?.customize{
             $0.text = "0"
         }

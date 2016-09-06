@@ -9,16 +9,16 @@
 import UIKit
 
 let dairy = FoodCategory(name: "Dairy & Eggs", foodItems: [FoodItem(id: "1", name: "Milk", price: 1.3, priceUnit: "bottle", imageName: "milk"), FoodItem(id: "2", name: "Eggs", price: 2.1, priceUnit: "dozen", imageName: "eggs")])
-let vegetables = FoodCategory(name: "Vegetables", foodItems: [FoodItem(id: "3", name: "Peas", price: 0.95, priceUnit: "bag", imageName: "peas")])
-let beans = FoodCategory(name: "Beans", foodItems: [FoodItem(id: "4", name: "Beans", price: 0.73, priceUnit: "can", imageName: "beans")])
+let vegetables = FoodCategory(name: "Vegetables & Beans", foodItems: [FoodItem(id: "3", name: "Peas", price: 0.95, priceUnit: "bag", imageName: "peas"), FoodItem(id: "4", name: "Beans", price: 0.73, priceUnit: "can", imageName: "beans")])
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var collectionView : UICollectionView?
+    @IBOutlet weak var collectionView : UICollectionView!
+    @IBOutlet weak var numberBadge : NumberBadge!
     
     @IBOutlet weak var checkoutButton : UIButton?
     
-    let groceryOptions = [dairy, vegetables, beans]
+    let groceryOptions = [dairy, vegetables]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +29,8 @@ class ViewController: UIViewController {
         checkoutButton?.customize{
             $0.backgroundColor = Style.Color.primary
             $0.titleLabel?.textColor = Style.Color.lightText
-            //$0.addTarget(self, action: #selector(checkoutButtonTapped), forControlEvents: .TouchUpInside)
         }
+        numberBadge.setBadgeNumber(ShoppingBasket.totalItemCount)
     }
 }
 
@@ -68,14 +68,25 @@ extension ViewController : UICollectionViewDataSource {
 extension ViewController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(collectionView.frame.size.width, 100)
+        
+        return CGSizeMake((collectionView.frame.width - 24) / 2, 192)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        if groceryOptions[section].items.count == 1 {
+            // Center when there is only one item
+            return UIEdgeInsetsMake(8, collectionView.frame.width / 4, 8, collectionView.frame.width / 4)
+        } else {
+            // More than one, center 2 items
+            return UIEdgeInsetsMake(8, 8, 8, 8)
+        }
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 0
+        return 8
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 0//8
+        return 8
     }
 }

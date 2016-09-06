@@ -23,15 +23,6 @@ class FoodItemCell : UICollectionViewCell {
     
     private var basketItem : BasketItem?
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        addButton?.customize{
-            $0.backgroundColor = Style.Color.primary
-            $0.addTarget(self, action: Selector(addToBasketPressed()), forControlEvents: .TouchUpInside)
-        }
-    }
-    
     func setupCell(basketItem : BasketItem) {
         self.basketItem = basketItem
         itemName?.text = basketItem.foodItem.name
@@ -40,7 +31,13 @@ class FoodItemCell : UICollectionViewCell {
         unitLabel?.text = basketItem.foodItem.unit.isEmpty ? "" : "per \(basketItem.foodItem.unit)"
         numberBadge?.setBadgeNumber(0)
         
-        quantityControl?.delegate = self
+        setupUI()
+    }
+    
+    func setupUI() {
+        quantityControl?.customize{
+            $0.delegate = self
+        }
         
         priceLabel?.customize{
             $0.textColor = Style.Color.price
@@ -50,41 +47,89 @@ class FoodItemCell : UICollectionViewCell {
             $0.contentMode = .ScaleAspectFit
         }
         
-        if quantityControl?.quantity == 0 {
-            addButton?.hidden = true
+        addButton?.customize{
+            $0.backgroundColor = Style.Color.primary
+            $0.layer.cornerRadius = 3
+            $0.addTarget(self, action: Selector(addToBasketPressed()), forControlEvents: .TouchUpInside)
         }
+        
+        BasketButtonState.Current.setupButton(addButton)
+        
+        
+//        quantityControl?.decrementButton?.customize{
+//            $0.layer.cornerRadius = 15
+//            $0.layer.borderColor = tintColor.CGColor
+//            $0.layer.borderWidth = 1
+//        }
+//        quantityControl?.incrementButton?.customize{
+//            $0.layer.cornerRadius = 15
+//            $0.layer.borderColor = tintColor.CGColor
+//            $0.layer.borderWidth = 1
+//        }
     }
     
     @IBAction func addToBasketPressed() {
-        
         guard let item = basketItem else {return}
         guard let quantity = quantityControl?.quantity else {return}
+        guard quantity != item.quantity else {return} // Only update if the quantity has changed
+        
         if quantity == 0 {
             ShoppingBasket.removeBasketItem(item)
         } else {
             self.basketItem = ShoppingBasket.addBasketItem(BasketItem(foodItem: item.foodItem, quantity: quantity))
         }
         numberBadge?.setBadgeNumber(basketItem?.quantity ?? 0)
-        addButton?.hidden = true
+        BasketButtonState.Current.setupButton(addButton)
     }
 }
 
 extension FoodItemCell : QuantityControlDelegate {
     func quantityHasBeenUpdated(quantity: Int) {
+        var buttonState : BasketButtonState?
         if basketItem?.quantity == 0 && quantity > 0 {
-            UIView.performWithoutAnimation({ [weak self] in
-                self?.addButton?.setTitle("Add to Basket", forState: .Normal)
-                self?.addButton?.layoutIfNeeded()
-                })
-            addButton?.hidden = false
+            buttonState = .Add
         } else if basketItem?.quantity == quantity {
-            addButton?.hidden = true
+            buttonState = .Current
         } else {
-            UIView.performWithoutAnimation({ [weak self] in
-                self?.addButton?.setTitle("Update Basket", forState: .Normal)
-                self?.addButton?.layoutIfNeeded()
+            buttonState = .Update
+        }
+        buttonState?.setupButton(addButton)
+    }
+}
+
+extension FoodItemCell {
+    enum BasketButtonState {
+        case Add
+        case Update
+        case Current
+        
+        func setupButton(button : UIButton?) {
+            var title : String = ""
+            var backgroundColor = UIColor.clearColor(), textColor = UIColor.clearColor()
+            
+            switch self {
+            case .Add:
+                title = "Add to Basket"
+                backgroundColor = Style.Color.primary
+                textColor = Style.Color.lightText
+            case .Update:
+                title = "Update Basket"
+                backgroundColor = Style.Color.primary
+                textColor = Style.Color.lightText
+            case .Current:
+                title = "In Basket"
+                backgroundColor = Style.Color.lightGray
+                textColor = Style.Color.gray
+            }
+            UIView.performWithoutAnimation({
+                button?.setTitle(title, forState: .Normal)
+                button?.backgroundColor = backgroundColor
+                button?.setTitleColor(textColor, forState: .Normal)
+                button?.layoutIfNeeded()
             })
-            addButton?.hidden = false
+            
         }
     }
 }
+
+

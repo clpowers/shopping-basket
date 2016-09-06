@@ -16,7 +16,7 @@ enum Style {
         }
         
         static var text : UIColor {
-            return UIColor.darkGrayColor()
+            return UIColor.blackColor().colorWithAlphaComponent(0.7)
         }
         
         static var lightText : UIColor {
@@ -29,6 +29,14 @@ enum Style {
         
         static var accent : UIColor {
             return UIColor.blueColor()
+        }
+        
+        static var gray : UIColor {
+            return UIColor.blackColor().colorWithAlphaComponent(0.25)
+        }
+        
+        static var lightGray : UIColor {
+            return UIColor.blackColor().colorWithAlphaComponent(0.07)
         }
     }
     
