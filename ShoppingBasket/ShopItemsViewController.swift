@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ShopItemsViewController.swift
 //  ShoppingBasket
 //
 //  Created by Chelsea Powers on 8/31/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ShopItemsViewController: UIViewController {
 
     @IBOutlet weak var collectionView : UICollectionView!
     @IBOutlet weak var numberBadge : NumberBadge!
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController : UICollectionViewDataSource, UICollectionViewDelegate {
+extension ShopItemsViewController : UICollectionViewDataSource, UICollectionViewDelegate {
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return groceryOptions.count
@@ -63,7 +63,7 @@ extension ViewController : UICollectionViewDataSource, UICollectionViewDelegate 
     }
 }
 
-extension ViewController : UICollectionViewDelegateFlowLayout {
+extension ShopItemsViewController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
