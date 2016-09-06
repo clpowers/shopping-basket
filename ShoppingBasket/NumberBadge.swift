@@ -25,7 +25,7 @@ class BasketBadge : NumberBadge, ShoppingBasketDelegate {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        ShoppingBasket.sharedInstance.delegate = self
+        ShoppingBasket.setDelegate(self)
     }
     
     func shoppingBasketDidUpdateItemCount(count: Int) {

@@ -27,7 +27,7 @@ class FoodItemCell : UICollectionViewCell {
         self.basketItem = basketItem
         itemName?.text = basketItem.foodItem.name
         itemImage?.image = basketItem.foodItem.image
-        priceLabel?.text = PriceFormatter.usdPriceString(fromDouble: basketItem.foodItem.price)
+        priceLabel?.text = PriceFormatter.priceString(fromDouble: basketItem.foodItem.price)
         unitLabel?.text = basketItem.foodItem.unit.isEmpty ? "" : "per \(basketItem.foodItem.unit)"
         numberBadge?.setBadgeNumber(0)
         
@@ -56,16 +56,16 @@ class FoodItemCell : UICollectionViewCell {
         BasketButtonState.Current.setupButton(addButton)
         
         
-//        quantityControl?.decrementButton?.customize{
-//            $0.layer.cornerRadius = 15
-//            $0.layer.borderColor = tintColor.CGColor
-//            $0.layer.borderWidth = 1
-//        }
-//        quantityControl?.incrementButton?.customize{
-//            $0.layer.cornerRadius = 15
-//            $0.layer.borderColor = tintColor.CGColor
-//            $0.layer.borderWidth = 1
-//        }
+        quantityControl?.decrementButton?.customize{
+            $0.layer.cornerRadius = 15
+            $0.layer.borderColor = tintColor.colorWithAlphaComponent(0.7).CGColor
+            $0.layer.borderWidth = 1
+        }
+        quantityControl?.incrementButton?.customize{
+            $0.layer.cornerRadius = 15
+            $0.layer.borderColor = tintColor.colorWithAlphaComponent(0.7).CGColor
+            $0.layer.borderWidth = 1
+        }
     }
     
     @IBAction func addToBasketPressed() {

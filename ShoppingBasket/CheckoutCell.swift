@@ -19,6 +19,6 @@ class CheckoutCell : UITableViewCell {
         quantity?.text = String(basketItem.quantity)
         itemName?.text = basketItem.foodItem.name
         itemImage?.image = basketItem.foodItem.image
-        priceLabel?.text = PriceFormatter.usdPriceString(fromDouble: basketItem.foodItem.price * Double(basketItem.quantity))
+        priceLabel?.text = PriceFormatter.priceString(fromDouble: basketItem.foodItem.price * Double(basketItem.quantity))
     }
 }

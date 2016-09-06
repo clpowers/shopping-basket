@@ -12,40 +12,45 @@ class CheckoutViewController : UIViewController, UIPopoverPresentationController
     
     @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var basketTotal : UILabel!
+    @IBOutlet weak var currencyButton : UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        basketTotal.text = PriceFormatter.usdPriceString(fromDouble: ShoppingBasket.basketTotal)
+        updateForCurrencyChange()
+    }
+    
+    func updateForCurrencyChange() {
+        tableView.reloadData()
+        currencyButton.title = "\(ShoppingBasket.currency.type.symbol) (\(ShoppingBasket.currency.type.rawValue))"
+        basketTotal.text = PriceFormatter.priceString(fromDouble: ShoppingBasket.basketTotal)
     }
     
     @IBAction func backButtonPressed() {
         navigationController?.popViewControllerAnimated(true)
     }
-
-    /*
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let currency = segue.destinationViewController as? CurrencySelectViewController, let currencyPopover = segue.destinationViewController.popoverPresentationController {
-            currency.modalPresentationStyle = .Popover
-            currency.preferredContentSize = CGSizeMake(300, 300)
-            currencyPopover.delegate = self
-            currencyPopover.sourceView = self.view
-        }
-    }*/
-}
-
-extension CheckoutViewController : UITableViewDelegate {
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc = segue.destinationViewController as? CurrencySelectViewController {
+            vc.delegate = self
+        }
+    }
 }
 
-extension CheckoutViewController : UITableViewDataSource {
+extension CheckoutViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ShoppingBasket.sharedInstance.items.count
+        return ShoppingBasket.uniqueItems
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("checkoutCell", forIndexPath: indexPath) as! CheckoutCell
-        cell.setupCell(ShoppingBasket.sharedInstance.items[indexPath.row])
+        cell.setupCell(ShoppingBasket.items[indexPath.row])
         return cell
+    }
+}
+
+extension CheckoutViewController : CurrencySelectDelegate {
+    
+    func currencyHasBeenUpdated() {
+        updateForCurrencyChange()
     }
 }

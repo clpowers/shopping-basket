@@ -140,7 +140,6 @@
 				36539E361D778F2700740216 /* Assets.xcassets */,
 				36539E381D778F2700740216 /* LaunchScreen.storyboard */,
 				36539E3B1D778F2700740216 /* Info.plist */,
-				36539E821D7E061C00740216 /* CurrencyManager.swift */,
 			);
 			path = ShoppingBasket;
 			sourceTree = "<group>";
@@ -168,6 +167,7 @@
 			children = (
 				36539E631D77903F00740216 /* Style.swift */,
 				36539E741D78D13400740216 /* Utilities.swift */,
+				36539E821D7E061C00740216 /* CurrencyManager.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";

@@ -25,6 +25,11 @@ class ViewController: UIViewController {
         setupUICustomizations()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.reloadData()
+    }
+    
     func setupUICustomizations() {
         checkoutButton?.customize{
             $0.backgroundColor = Style.Color.primary
@@ -34,11 +39,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController : UICollectionViewDelegate {
-    
-}
-
-extension ViewController : UICollectionViewDataSource {
+extension ViewController : UICollectionViewDataSource, UICollectionViewDelegate {
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return groceryOptions.count
@@ -72,13 +73,15 @@ extension ViewController : UICollectionViewDelegateFlowLayout {
         return CGSizeMake((collectionView.frame.width - 24) / 2, 192)
     }
     
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        let padding : CGFloat = 8.0
         if groceryOptions[section].items.count == 1 {
             // Center when there is only one item
-            return UIEdgeInsetsMake(8, collectionView.frame.width / 4, 8, collectionView.frame.width / 4)
+            return UIEdgeInsetsMake(padding, collectionView.frame.width / 4, padding, collectionView.frame.width / 4)
         } else {
             // More than one, center 2 items
-            return UIEdgeInsetsMake(8, 8, 8, 8)
+            return UIEdgeInsetsMake(padding, padding, padding, padding)
         }
     }
     

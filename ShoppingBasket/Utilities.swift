@@ -10,13 +10,8 @@ import Foundation
 import UIKit
 
 struct PriceFormatter {
-    static func usdPriceString(fromDouble double: Double) -> String {
-        return "$ \(String(format:"%.2f", double))"
-    }
- 
-    // Maybe don't need this?
-    static func doubleFromUSDString(usdPrice : String) -> Double {
-        return Double(usdPrice.stringByReplacingOccurrencesOfString("$", withString: "")) ?? 0.0
+    static func priceString(fromDouble double: Double) -> String {
+        return "\(ShoppingBasket.currency.type.symbol) \(String(format:"%.2f", ShoppingBasket.currency.conversionFactor * double))"
     }
 }
 
@@ -42,5 +37,16 @@ extension Array {
             }
         }
         return false
+    }
+}
+
+extension NSData {
+    func dataToJSON() -> AnyObject? {
+        do {
+            return try NSJSONSerialization.JSONObjectWithData(self, options: .MutableContainers)
+        } catch let error {
+            print(error)
+        }
+        return nil
     }
 }
