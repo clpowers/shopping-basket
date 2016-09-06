@@ -8,30 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		36539E301D778F2700740216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E2F1D778F2700740216 /* AppDelegate.swift */; };
-		36539E321D778F2700740216 /* ShopItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E311D778F2700740216 /* ShopItemsViewController.swift */; };
 		36539E351D778F2700740216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36539E331D778F2700740216 /* Main.storyboard */; };
 		36539E371D778F2700740216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36539E361D778F2700740216 /* Assets.xcassets */; };
 		36539E3A1D778F2700740216 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36539E381D778F2700740216 /* LaunchScreen.storyboard */; };
 		36539E451D778F2700740216 /* ShoppingBasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E441D778F2700740216 /* ShoppingBasketTests.swift */; };
 		36539E501D778F2700740216 /* ShoppingBasketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E4F1D778F2700740216 /* ShoppingBasketUITests.swift */; };
-		36539E5E1D778F5800740216 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E5D1D778F5800740216 /* FloatingButton.swift */; };
-		36539E641D77903F00740216 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E631D77903F00740216 /* Style.swift */; };
-		36539E661D7792E000740216 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E651D7792E000740216 /* FoodItem.swift */; };
-		36539E691D77930C00740216 /* BasketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E681D77930C00740216 /* BasketItem.swift */; };
-		36539E6B1D77936700740216 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E6A1D77936700740216 /* FoodCategory.swift */; };
-		36539E6D1D779A0400740216 /* FoodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E6C1D779A0400740216 /* FoodItemCell.swift */; };
-		36539E6F1D788C0F00740216 /* NumberBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E6E1D788C0F00740216 /* NumberBadge.swift */; };
-		36539E711D78C6D200740216 /* CategoryReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E701D78C6D200740216 /* CategoryReusableView.swift */; };
-		36539E731D78C8A100740216 /* ShoppingBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E721D78C8A100740216 /* ShoppingBasket.swift */; };
-		36539E751D78D13400740216 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E741D78D13400740216 /* Utilities.swift */; };
-		36539E771D78F0AC00740216 /* QuantityControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E761D78F0AC00740216 /* QuantityControl.swift */; };
-		36539E7A1D7916DF00740216 /* ButtonReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E791D7916DF00740216 /* ButtonReusableView.swift */; };
-		36539E7D1D7DB62C00740216 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E7C1D7DB62C00740216 /* CheckoutViewController.swift */; };
-		36539E811D7DDEAB00740216 /* CheckoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E801D7DDEAB00740216 /* CheckoutCell.swift */; };
-		36539E831D7E061C00740216 /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E821D7E061C00740216 /* CurrencyManager.swift */; };
-		36539E851D7E1A4C00740216 /* CurrencySelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E841D7E1A4C00740216 /* CurrencySelectViewController.swift */; };
-		36539E871D7E263700740216 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E861D7E263700740216 /* CurrencyCell.swift */; };
-		36AD09D41D7EFC7E007EB17F /* FoodItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09D31D7EFC7E007EB17F /* FoodItemsManager.swift */; };
+		36AD09D81D7F05FA007EB17F /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09D51D7F05FA007EB17F /* CheckoutViewController.swift */; };
+		36AD09D91D7F05FA007EB17F /* CurrencySelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09D61D7F05FA007EB17F /* CurrencySelectViewController.swift */; };
+		36AD09DA1D7F05FA007EB17F /* ShopItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09D71D7F05FA007EB17F /* ShopItemsViewController.swift */; };
+		36AD09DF1D7F060B007EB17F /* BasketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09DB1D7F060B007EB17F /* BasketItem.swift */; };
+		36AD09E01D7F060B007EB17F /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09DC1D7F060B007EB17F /* FoodCategory.swift */; };
+		36AD09E11D7F060B007EB17F /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09DD1D7F060B007EB17F /* FoodItem.swift */; };
+		36AD09E21D7F060B007EB17F /* ShoppingBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09DE1D7F060B007EB17F /* ShoppingBasket.swift */; };
+		36AD09E91D7F0660007EB17F /* CategoryReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09E41D7F0660007EB17F /* CategoryReusableView.swift */; };
+		36AD09EA1D7F0660007EB17F /* CheckoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09E51D7F0660007EB17F /* CheckoutCell.swift */; };
+		36AD09EB1D7F0660007EB17F /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09E61D7F0660007EB17F /* CurrencyCell.swift */; };
+		36AD09EC1D7F0660007EB17F /* FoodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09E71D7F0660007EB17F /* FoodItemCell.swift */; };
+		36AD09EE1D7F0669007EB17F /* NumberBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09ED1D7F0669007EB17F /* NumberBadge.swift */; };
+		36AD09F11D7F067C007EB17F /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09EF1D7F067C007EB17F /* FloatingButton.swift */; };
+		36AD09F21D7F067C007EB17F /* QuantityControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09F01D7F067C007EB17F /* QuantityControl.swift */; };
+		36AD09F51D7F068E007EB17F /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09F31D7F068E007EB17F /* Style.swift */; };
+		36AD09F61D7F068E007EB17F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09F41D7F068E007EB17F /* Utilities.swift */; };
+		36AD09FA1D7F06AC007EB17F /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09F81D7F06AC007EB17F /* CurrencyManager.swift */; };
+		36AD09FB1D7F06AC007EB17F /* FoodItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09F91D7F06AC007EB17F /* FoodItemsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 /* Begin PBXFileReference section */
 		36539E2C1D778F2700740216 /* ShoppingBasket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingBasket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36539E2F1D778F2700740216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		36539E311D778F2700740216 /* ShopItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemsViewController.swift; sourceTree = "<group>"; };
 		36539E341D778F2700740216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36539E361D778F2700740216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36539E391D778F2700740216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,24 +63,24 @@
 		36539E4B1D778F2700740216 /* ShoppingBasketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingBasketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36539E4F1D778F2700740216 /* ShoppingBasketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketUITests.swift; sourceTree = "<group>"; };
 		36539E511D778F2700740216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36539E5D1D778F5800740216 /* FloatingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
-		36539E631D77903F00740216 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		36539E651D7792E000740216 /* FoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
-		36539E681D77930C00740216 /* BasketItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasketItem.swift; sourceTree = "<group>"; };
-		36539E6A1D77936700740216 /* FoodCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
-		36539E6C1D779A0400740216 /* FoodItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemCell.swift; sourceTree = "<group>"; };
-		36539E6E1D788C0F00740216 /* NumberBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberBadge.swift; sourceTree = "<group>"; };
-		36539E701D78C6D200740216 /* CategoryReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryReusableView.swift; sourceTree = "<group>"; };
-		36539E721D78C8A100740216 /* ShoppingBasket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingBasket.swift; sourceTree = "<group>"; };
-		36539E741D78D13400740216 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		36539E761D78F0AC00740216 /* QuantityControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityControl.swift; sourceTree = "<group>"; };
-		36539E791D7916DF00740216 /* ButtonReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonReusableView.swift; sourceTree = "<group>"; };
-		36539E7C1D7DB62C00740216 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
-		36539E801D7DDEAB00740216 /* CheckoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutCell.swift; sourceTree = "<group>"; };
-		36539E821D7E061C00740216 /* CurrencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
-		36539E841D7E1A4C00740216 /* CurrencySelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencySelectViewController.swift; sourceTree = "<group>"; };
-		36539E861D7E263700740216 /* CurrencyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
-		36AD09D31D7EFC7E007EB17F /* FoodItemsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemsManager.swift; sourceTree = "<group>"; };
+		36AD09D51D7F05FA007EB17F /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckoutViewController.swift; path = Controllers/CheckoutViewController.swift; sourceTree = "<group>"; };
+		36AD09D61D7F05FA007EB17F /* CurrencySelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrencySelectViewController.swift; path = Controllers/CurrencySelectViewController.swift; sourceTree = "<group>"; };
+		36AD09D71D7F05FA007EB17F /* ShopItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopItemsViewController.swift; path = Controllers/ShopItemsViewController.swift; sourceTree = "<group>"; };
+		36AD09DB1D7F060B007EB17F /* BasketItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasketItem.swift; path = Models/BasketItem.swift; sourceTree = "<group>"; };
+		36AD09DC1D7F060B007EB17F /* FoodCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodCategory.swift; path = Models/FoodCategory.swift; sourceTree = "<group>"; };
+		36AD09DD1D7F060B007EB17F /* FoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodItem.swift; path = Models/FoodItem.swift; sourceTree = "<group>"; };
+		36AD09DE1D7F060B007EB17F /* ShoppingBasket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingBasket.swift; path = Models/ShoppingBasket.swift; sourceTree = "<group>"; };
+		36AD09E41D7F0660007EB17F /* CategoryReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryReusableView.swift; path = Views/Cells/CategoryReusableView.swift; sourceTree = "<group>"; };
+		36AD09E51D7F0660007EB17F /* CheckoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckoutCell.swift; path = Views/Cells/CheckoutCell.swift; sourceTree = "<group>"; };
+		36AD09E61D7F0660007EB17F /* CurrencyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrencyCell.swift; path = Views/Cells/CurrencyCell.swift; sourceTree = "<group>"; };
+		36AD09E71D7F0660007EB17F /* FoodItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodItemCell.swift; path = Views/Cells/FoodItemCell.swift; sourceTree = "<group>"; };
+		36AD09ED1D7F0669007EB17F /* NumberBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberBadge.swift; path = Views/NumberBadge.swift; sourceTree = "<group>"; };
+		36AD09EF1D7F067C007EB17F /* FloatingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatingButton.swift; path = Views/Controls/FloatingButton.swift; sourceTree = "<group>"; };
+		36AD09F01D7F067C007EB17F /* QuantityControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuantityControl.swift; path = Views/Controls/QuantityControl.swift; sourceTree = "<group>"; };
+		36AD09F31D7F068E007EB17F /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Style.swift; path = Helpers/Style.swift; sourceTree = "<group>"; };
+		36AD09F41D7F068E007EB17F /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = Helpers/Utilities.swift; sourceTree = "<group>"; };
+		36AD09F81D7F06AC007EB17F /* CurrencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrencyManager.swift; path = Managers/CurrencyManager.swift; sourceTree = "<group>"; };
+		36AD09F91D7F06AC007EB17F /* FoodItemsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodItemsManager.swift; path = Managers/FoodItemsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +131,7 @@
 		36539E2E1D778F2700740216 /* ShoppingBasket */ = {
 			isa = PBXGroup;
 			children = (
+				36AD09F71D7F0695007EB17F /* Managers */,
 				36539E7B1D7DB61300740216 /* Controllers */,
 				36539E671D7792E500740216 /* Models */,
 				36539E601D778FC000740216 /* Views */,
@@ -167,10 +166,8 @@
 		36539E5F1D778FBA00740216 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				36539E631D77903F00740216 /* Style.swift */,
-				36539E741D78D13400740216 /* Utilities.swift */,
-				36539E821D7E061C00740216 /* CurrencyManager.swift */,
-				36AD09D31D7EFC7E007EB17F /* FoodItemsManager.swift */,
+				36AD09F31D7F068E007EB17F /* Style.swift */,
+				36AD09F41D7F068E007EB17F /* Utilities.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -178,9 +175,9 @@
 		36539E601D778FC000740216 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				36AD09ED1D7F0669007EB17F /* NumberBadge.swift */,
 				36539E7F1D7DDE7E00740216 /* Controls */,
 				36539E7E1D7DDE7800740216 /* Cells */,
-				36539E6E1D788C0F00740216 /* NumberBadge.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -188,10 +185,10 @@
 		36539E671D7792E500740216 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				36539E651D7792E000740216 /* FoodItem.swift */,
-				36539E6A1D77936700740216 /* FoodCategory.swift */,
-				36539E681D77930C00740216 /* BasketItem.swift */,
-				36539E721D78C8A100740216 /* ShoppingBasket.swift */,
+				36AD09DB1D7F060B007EB17F /* BasketItem.swift */,
+				36AD09DC1D7F060B007EB17F /* FoodCategory.swift */,
+				36AD09DD1D7F060B007EB17F /* FoodItem.swift */,
+				36AD09DE1D7F060B007EB17F /* ShoppingBasket.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -199,9 +196,9 @@
 		36539E7B1D7DB61300740216 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				36539E311D778F2700740216 /* ShopItemsViewController.swift */,
-				36539E7C1D7DB62C00740216 /* CheckoutViewController.swift */,
-				36539E841D7E1A4C00740216 /* CurrencySelectViewController.swift */,
+				36AD09D51D7F05FA007EB17F /* CheckoutViewController.swift */,
+				36AD09D61D7F05FA007EB17F /* CurrencySelectViewController.swift */,
+				36AD09D71D7F05FA007EB17F /* ShopItemsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -209,11 +206,10 @@
 		36539E7E1D7DDE7800740216 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				36539E701D78C6D200740216 /* CategoryReusableView.swift */,
-				36539E791D7916DF00740216 /* ButtonReusableView.swift */,
-				36539E6C1D779A0400740216 /* FoodItemCell.swift */,
-				36539E801D7DDEAB00740216 /* CheckoutCell.swift */,
-				36539E861D7E263700740216 /* CurrencyCell.swift */,
+				36AD09E41D7F0660007EB17F /* CategoryReusableView.swift */,
+				36AD09E51D7F0660007EB17F /* CheckoutCell.swift */,
+				36AD09E61D7F0660007EB17F /* CurrencyCell.swift */,
+				36AD09E71D7F0660007EB17F /* FoodItemCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -221,10 +217,19 @@
 		36539E7F1D7DDE7E00740216 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				36539E5D1D778F5800740216 /* FloatingButton.swift */,
-				36539E761D78F0AC00740216 /* QuantityControl.swift */,
+				36AD09EF1D7F067C007EB17F /* FloatingButton.swift */,
+				36AD09F01D7F067C007EB17F /* QuantityControl.swift */,
 			);
 			name = Controls;
+			sourceTree = "<group>";
+		};
+		36AD09F71D7F0695007EB17F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				36AD09F81D7F06AC007EB17F /* CurrencyManager.swift */,
+				36AD09F91D7F06AC007EB17F /* FoodItemsManager.swift */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,26 +362,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36539E321D778F2700740216 /* ShopItemsViewController.swift in Sources */,
+				36AD09FA1D7F06AC007EB17F /* CurrencyManager.swift in Sources */,
+				36AD09EB1D7F0660007EB17F /* CurrencyCell.swift in Sources */,
 				36539E301D778F2700740216 /* AppDelegate.swift in Sources */,
-				36539E691D77930C00740216 /* BasketItem.swift in Sources */,
-				36539E871D7E263700740216 /* CurrencyCell.swift in Sources */,
-				36539E811D7DDEAB00740216 /* CheckoutCell.swift in Sources */,
-				36539E711D78C6D200740216 /* CategoryReusableView.swift in Sources */,
-				36539E5E1D778F5800740216 /* FloatingButton.swift in Sources */,
-				36539E6D1D779A0400740216 /* FoodItemCell.swift in Sources */,
-				36539E751D78D13400740216 /* Utilities.swift in Sources */,
-				36539E6B1D77936700740216 /* FoodCategory.swift in Sources */,
-				36539E771D78F0AC00740216 /* QuantityControl.swift in Sources */,
-				36539E641D77903F00740216 /* Style.swift in Sources */,
-				36539E731D78C8A100740216 /* ShoppingBasket.swift in Sources */,
-				36539E6F1D788C0F00740216 /* NumberBadge.swift in Sources */,
-				36539E661D7792E000740216 /* FoodItem.swift in Sources */,
-				36539E7D1D7DB62C00740216 /* CheckoutViewController.swift in Sources */,
-				36539E851D7E1A4C00740216 /* CurrencySelectViewController.swift in Sources */,
-				36539E7A1D7916DF00740216 /* ButtonReusableView.swift in Sources */,
-				36AD09D41D7EFC7E007EB17F /* FoodItemsManager.swift in Sources */,
-				36539E831D7E061C00740216 /* CurrencyManager.swift in Sources */,
+				36AD09F61D7F068E007EB17F /* Utilities.swift in Sources */,
+				36AD09E21D7F060B007EB17F /* ShoppingBasket.swift in Sources */,
+				36AD09D91D7F05FA007EB17F /* CurrencySelectViewController.swift in Sources */,
+				36AD09EC1D7F0660007EB17F /* FoodItemCell.swift in Sources */,
+				36AD09DA1D7F05FA007EB17F /* ShopItemsViewController.swift in Sources */,
+				36AD09E91D7F0660007EB17F /* CategoryReusableView.swift in Sources */,
+				36AD09F21D7F067C007EB17F /* QuantityControl.swift in Sources */,
+				36AD09EA1D7F0660007EB17F /* CheckoutCell.swift in Sources */,
+				36AD09DF1D7F060B007EB17F /* BasketItem.swift in Sources */,
+				36AD09D81D7F05FA007EB17F /* CheckoutViewController.swift in Sources */,
+				36AD09E11D7F060B007EB17F /* FoodItem.swift in Sources */,
+				36AD09E01D7F060B007EB17F /* FoodCategory.swift in Sources */,
+				36AD09EE1D7F0669007EB17F /* NumberBadge.swift in Sources */,
+				36AD09F51D7F068E007EB17F /* Style.swift in Sources */,
+				36AD09FB1D7F06AC007EB17F /* FoodItemsManager.swift in Sources */,
+				36AD09F11D7F067C007EB17F /* FloatingButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
