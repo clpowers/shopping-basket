@@ -13,10 +13,17 @@ class CheckoutViewController : UIViewController, UIPopoverPresentationController
     @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var basketTotal : UILabel!
     @IBOutlet weak var currencyButton : UIBarButtonItem!
+    @IBOutlet weak var emptyStateView : UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateForCurrencyChange()
+        
+        if ShoppingBasket.totalItemCount <= 0 {
+            emptyStateView.hidden = false
+            tableView.hidden = true
+        } else {
+            updateForCurrencyChange()
+        }
     }
     
     func updateForCurrencyChange() {

@@ -358,6 +358,22 @@
                                     <action selector="checkoutButtonPressed" destination="dUj-4O-ynR" eventType="touchUpInside" id="0hT-tH-mWo"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMc-Hf-ml2">
+                                <rect key="frame" x="0.0" y="64" width="600" height="486"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no items in your basket.  Time to go shopping!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S33-sa-SG2">
+                                        <rect key="frame" x="188" y="178" width="224.5" height="50.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.50192307692307692" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="S33-sa-SG2" firstAttribute="centerY" secondItem="PMc-Hf-ml2" secondAttribute="centerY" constant="-40" id="0gN-M2-SxR"/>
+                                    <constraint firstItem="S33-sa-SG2" firstAttribute="centerX" secondItem="PMc-Hf-ml2" secondAttribute="centerX" id="7tB-4C-Ea0"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DD2-go-wUo">
                                 <rect key="frame" x="0.0" y="64" width="600" height="486"/>
                                 <color key="backgroundColor" red="0.027450980390000001" green="0.0" blue="0.0" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
@@ -433,7 +449,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$15.32" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnU-97-0Ln">
-                                                    <rect key="frame" x="534" y="21.5" width="50" height="17"/>
+                                                    <rect key="frame" x="534" y="21" width="50" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="SJ2-LK-6Yj"/>
                                                     </constraints>
@@ -495,14 +511,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="PMc-Hf-ml2" firstAttribute="top" secondItem="DD2-go-wUo" secondAttribute="top" id="15j-Tf-lpF"/>
+                            <constraint firstItem="PMc-Hf-ml2" firstAttribute="trailing" secondItem="DD2-go-wUo" secondAttribute="trailing" id="5Wt-uC-JzQ"/>
                             <constraint firstItem="DD2-go-wUo" firstAttribute="top" secondItem="MMy-Tv-Af5" secondAttribute="bottom" id="5ae-At-c9G"/>
                             <constraint firstItem="W2i-xP-nKn" firstAttribute="top" secondItem="DD2-go-wUo" secondAttribute="bottom" id="DuL-qa-RdX"/>
                             <constraint firstItem="MMy-Tv-Af5" firstAttribute="top" secondItem="lUJ-mv-WkW" secondAttribute="bottom" constant="-20" id="S4D-qA-d1D"/>
                             <constraint firstItem="DD2-go-wUo" firstAttribute="leading" secondItem="A48-cZ-pcD" secondAttribute="leading" id="WZA-3k-Kfn"/>
+                            <constraint firstItem="PMc-Hf-ml2" firstAttribute="bottom" secondItem="DD2-go-wUo" secondAttribute="bottom" id="clP-tz-wEp"/>
                             <constraint firstItem="MMy-Tv-Af5" firstAttribute="leading" secondItem="A48-cZ-pcD" secondAttribute="leading" id="f0t-Wk-JNo"/>
                             <constraint firstAttribute="trailing" secondItem="W2i-xP-nKn" secondAttribute="trailing" id="gF7-dB-vG7"/>
                             <constraint firstAttribute="trailing" secondItem="DD2-go-wUo" secondAttribute="trailing" id="iBC-DI-zuD"/>
                             <constraint firstItem="7IW-Zo-lV9" firstAttribute="top" secondItem="DD2-go-wUo" secondAttribute="bottom" constant="50" id="lyM-jN-6oL"/>
+                            <constraint firstItem="PMc-Hf-ml2" firstAttribute="leading" secondItem="DD2-go-wUo" secondAttribute="leading" id="taE-Vm-cdd"/>
                             <constraint firstItem="W2i-xP-nKn" firstAttribute="leading" secondItem="A48-cZ-pcD" secondAttribute="leading" id="ujv-JD-Qlt"/>
                             <constraint firstAttribute="trailing" secondItem="MMy-Tv-Af5" secondAttribute="trailing" id="y1G-Zr-tah"/>
                         </constraints>
@@ -510,6 +530,7 @@
                     <connections>
                         <outlet property="basketTotal" destination="0TV-0m-4eC" id="v4i-Or-4fa"/>
                         <outlet property="currencyButton" destination="cLH-Qj-GXa" id="iyD-zh-Zqu"/>
+                        <outlet property="emptyStateView" destination="PMc-Hf-ml2" id="Axl-x1-uBp"/>
                         <outlet property="tableView" destination="DD2-go-wUo" id="W3m-zm-a06"/>
                     </connections>
                 </viewController>
