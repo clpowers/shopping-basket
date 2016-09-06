@@ -53,12 +53,21 @@ class CurrencyManager {
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         let task = session.dataTaskWithURL(NSURL(string: "\(BASE_URL)live?access_key=\(API_KEY)&currencies=\(type.rawValue)&format=1")!) { data, response, error in
             
-            guard let data = data else {completion(nil); return;}
+            guard let data = data else {
+                dispatch_async(dispatch_get_main_queue(), {
+                    completion(nil)
+                })
+                return
+            }
             let json = data.dataToJSON()
             if let quotes = json?["quotes"] as? [String : Double], let conversion = quotes["USD\(type.rawValue)"] {
-                completion(Currency(conversionFactor: conversion, type: type))
+                dispatch_async(dispatch_get_main_queue(), {
+                    completion(Currency(conversionFactor: conversion, type: type))
+                })
             } else {
-                completion(nil);
+                dispatch_async(dispatch_get_main_queue(), {
+                    completion(nil);
+                })
             }
         }
         task.resume()

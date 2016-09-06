@@ -69,6 +69,7 @@ extension CurrencySelectViewController : UITableViewDelegate {
         guard selectedType != .USD else {
             // Don't need to make a service call for USD conversion
             ShoppingBasket.updateCurrency(Currency(conversionFactor: 1.0, type: .USD))
+            delegate?.currencyHasBeenUpdated()
             dismissViewControllerAnimated(true, completion: nil)
             return
         }
