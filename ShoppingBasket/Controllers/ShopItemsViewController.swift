@@ -27,6 +27,13 @@ class ShopItemsViewController: UIViewController {
         collectionView.reloadData()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if collectionView.contentSize.height + 50 < collectionView.frame.size.height {
+            checkoutButton?.hidden = false
+        }
+    }
+    
     func setupUICustomizations() {
         checkoutButton?.customize{
             $0.backgroundColor = Style.Color.primary
