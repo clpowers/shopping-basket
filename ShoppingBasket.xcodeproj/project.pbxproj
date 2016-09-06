@@ -31,6 +31,7 @@
 		36539E831D7E061C00740216 /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E821D7E061C00740216 /* CurrencyManager.swift */; };
 		36539E851D7E1A4C00740216 /* CurrencySelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E841D7E1A4C00740216 /* CurrencySelectViewController.swift */; };
 		36539E871D7E263700740216 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36539E861D7E263700740216 /* CurrencyCell.swift */; };
+		36AD09D41D7EFC7E007EB17F /* FoodItemsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD09D31D7EFC7E007EB17F /* FoodItemsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		36539E821D7E061C00740216 /* CurrencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
 		36539E841D7E1A4C00740216 /* CurrencySelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencySelectViewController.swift; sourceTree = "<group>"; };
 		36539E861D7E263700740216 /* CurrencyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		36AD09D31D7EFC7E007EB17F /* FoodItemsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItemsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				36539E631D77903F00740216 /* Style.swift */,
 				36539E741D78D13400740216 /* Utilities.swift */,
 				36539E821D7E061C00740216 /* CurrencyManager.swift */,
+				36AD09D31D7EFC7E007EB17F /* FoodItemsManager.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				36539E7D1D7DB62C00740216 /* CheckoutViewController.swift in Sources */,
 				36539E851D7E1A4C00740216 /* CurrencySelectViewController.swift in Sources */,
 				36539E7A1D7916DF00740216 /* ButtonReusableView.swift in Sources */,
+				36AD09D41D7EFC7E007EB17F /* FoodItemsManager.swift in Sources */,
 				36539E831D7E061C00740216 /* CurrencyManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

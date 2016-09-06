@@ -44,7 +44,8 @@ class QuantityControl : UIStackView {
         delegate?.quantityHasBeenUpdated(quantity)
     }
     
-    func resetToZero() {
-        quantity = 0
+    func setupWithQuantity(quantity : Int) {
+        self.quantity = quantity
+        delegate?.quantityHasBeenUpdated(quantity)
     }
 }

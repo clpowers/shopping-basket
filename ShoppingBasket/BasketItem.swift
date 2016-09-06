@@ -10,7 +10,7 @@ class BasketItem : Equatable {
     let foodItem : FoodItem
     var quantity : Int
     
-    init(foodItem : FoodItem, quantity : Int = 1) {
+    init(foodItem : FoodItem, quantity : Int = 0) {
         self.foodItem = foodItem
         self.quantity = quantity
     }

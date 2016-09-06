@@ -29,7 +29,12 @@ class FoodItemCell : UICollectionViewCell {
         itemImage?.image = basketItem.foodItem.image
         priceLabel?.text = PriceFormatter.priceString(fromDouble: basketItem.foodItem.price)
         unitLabel?.text = basketItem.foodItem.unit.isEmpty ? "" : "per \(basketItem.foodItem.unit)"
-        numberBadge?.setBadgeNumber(0)
+        
+        let selectedQuantity = ShoppingBasket.basketQuantityForFoodItem(basketItem.foodItem)
+        basketItem.quantity = selectedQuantity
+        numberBadge?.setBadgeNumber(selectedQuantity)
+        quantityControl?.setupWithQuantity(selectedQuantity)
+        BasketButtonState.Current.setupButton(addButton)
         
         setupUI()
     }
@@ -50,7 +55,7 @@ class FoodItemCell : UICollectionViewCell {
         addButton?.customize{
             $0.backgroundColor = Style.Color.primary
             $0.layer.cornerRadius = 3
-            $0.addTarget(self, action: Selector(addToBasketPressed()), forControlEvents: .TouchUpInside)
+            $0.addTarget(self, action: #selector(addToBasketPressed), forControlEvents: .TouchUpInside)
         }
         
         BasketButtonState.Current.setupButton(addButton)
@@ -86,10 +91,10 @@ class FoodItemCell : UICollectionViewCell {
 extension FoodItemCell : QuantityControlDelegate {
     func quantityHasBeenUpdated(quantity: Int) {
         var buttonState : BasketButtonState?
-        if basketItem?.quantity == 0 && quantity > 0 {
-            buttonState = .Add
-        } else if basketItem?.quantity == quantity {
+        if basketItem?.quantity == quantity {
             buttonState = .Current
+        } else if basketItem?.quantity == 0 && quantity > 0 {
+            buttonState = .Add
         } else {
             buttonState = .Update
         }

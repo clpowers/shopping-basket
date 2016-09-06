@@ -29,6 +29,12 @@ class CheckoutViewController : UIViewController, UIPopoverPresentationController
         navigationController?.popViewControllerAnimated(true)
     }
     
+    @IBAction func checkoutButtonPressed() {
+        let alert = UIAlertController(title: "Uh oh!", message: "You can't actually purchase groceries here. Hang tight for v2.", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Ok, will do!", style: .Default, handler: nil))
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let vc = segue.destinationViewController as? CurrencySelectViewController {
             vc.delegate = self

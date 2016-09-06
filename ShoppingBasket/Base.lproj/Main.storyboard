@@ -354,6 +354,9 @@
                                 <state key="normal" title="Complete Order">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkoutButtonPressed" destination="dUj-4O-ynR" eventType="touchUpInside" id="0hT-tH-mWo"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DD2-go-wUo">
                                 <rect key="frame" x="0.0" y="64" width="600" height="486"/>

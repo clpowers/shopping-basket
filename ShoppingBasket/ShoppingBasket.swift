@@ -48,6 +48,15 @@ class ShoppingBasket {
         ShoppingBasket.sharedInstance.delegate = delegate
     }
     
+    static func basketQuantityForFoodItem(foodItem: FoodItem) -> Int {
+        let matching = ShoppingBasket.sharedInstance.items.filter({$0.foodItem == foodItem})
+        if matching.count > 0 {
+            return matching[0].quantity
+        } else {
+            return 0
+        }
+    }
+    
     // MARK: - Static Vars
     
     static var items : [BasketItem] {
